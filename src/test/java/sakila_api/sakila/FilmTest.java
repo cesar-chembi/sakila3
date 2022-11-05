@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 public class FilmTest {
 
     @Test
-    public void testGetFilmId(){
+    void testGetFilmId(){
         Film newFilm = new Film();
         Assertions.assertEquals(0, newFilm.getFilmId(), "film ID get not working");
 
