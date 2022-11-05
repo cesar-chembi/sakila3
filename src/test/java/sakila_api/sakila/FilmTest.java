@@ -53,6 +53,24 @@ public class FilmTest {
         Assertions.assertEquals("new_title", newFilm.getTitle(), "film ID set not working");
     }
 
+	
+	@Test
+    public void testSetTitle1(){
+        Film newFilm = new Film("title",
+                "description",
+                2000,
+                1,
+                1,
+                1.0,
+                1,
+                1.0,
+                "PG13",
+                "special_features");
+        newFilm.setTitle("new_title");
+        Assertions.assertEquals("new_title", newFilm.getTitle(), "film ID set not working");
+    }
+	
+	
     @Test
     public void testGetDescription(){
         Film newFilm = new Film("title",
