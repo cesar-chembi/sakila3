@@ -84,10 +84,7 @@ public class SakilaApplication {
 	}
 	
 	
-	public Actor createActor1(@RequestBody Actor actor) {
-		return actorRepo.save(actor);
-	}
-
+	
 	@DeleteMapping("/allActors/{id}")
 	public Map<String, Boolean> deleteEmployee(@PathVariable(value = "id") int actorId)
 			throws ResourceNotFoundException {
