@@ -78,20 +78,7 @@ public class SakilaApplication {
 		return ResponseEntity.ok(actor);
 	}
 
-	@PutMapping("/allActors1/{id}")
-	public ResponseEntity<Actor> updateActor1(@PathVariable(value = "id") int actorId,
-												   @RequestBody Actor actorDetails) throws ResourceNotFoundException {
-		Actor actor = actorRepo.findById(actorId)
-				.orElseThrow(() -> new ResourceNotFoundException("Actor not found for this id :: " + actorId));
-
-		actor.setActorFirstName(actorDetails.getActorFirstName());
-		actor.setActorLastName(actorDetails.getActorLastName());
-
-		actorRepo.save(actor);
-		return ResponseEntity.ok(actor);
-	}
-
-	
+		
 	
 	@PostMapping("/allActors")
 	public Actor createActor(@RequestBody Actor actor) {
