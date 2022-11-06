@@ -99,7 +99,7 @@ public class SakilaApplication {
 	}
 
 
-	/* film table methods */
+	
 	@GetMapping("/allFilms")
 	public @ResponseBody
 	Iterable<Film> getAllFilms() { return filmRepo.findAll();}
