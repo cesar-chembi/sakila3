@@ -77,8 +77,6 @@ public class SakilaApplication {
 		actorRepo.save(actor);
 		return ResponseEntity.ok(actor);
 	}
-
-		
 	
 	@PostMapping("/allActors")
 	public Actor createActor(@RequestBody Actor actor) {
