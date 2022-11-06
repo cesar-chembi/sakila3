@@ -84,6 +84,9 @@ public class SakilaApplication {
 	}
 	
 	
+	public Actor createActorPrueba(@RequestBody Actor actor, String cantidad) {
+		return actorRepo.save(actor);
+	}
 	
 	
 	@DeleteMapping("/allActors/{id}")
